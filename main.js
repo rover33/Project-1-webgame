@@ -2,16 +2,19 @@ var gameStarted = true; //this says start the game
 setTimeout(function() {
     alert('game over') //when 1 minute has passed game will alert that its over.
     gameStarted = false;
-},10 * 1000)
+},60 * 1000)
 startGame()
 
-var audio = new Audio('audio/minimale-animale.mp3') //audio for the game
-audio.play();
+// var audio = new Audio('audio/minimale-animale.mp3') //audio for the game
+// audio.play();
 
 
 function startGame(){
 
-   
+   window.onkeydown = function(run){
+   run.keyCode == 37;
+       alert("key A!");
+   };
 
     function spawnRightArrow() {
         let container = document.getElementById("container");
@@ -90,5 +93,7 @@ function startGame(){
         return number;
     }
 
+  
 
+   
 }
