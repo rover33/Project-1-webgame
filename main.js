@@ -5,8 +5,12 @@ function spawnArrows() {
     rightArrow.height = "75";
     container.appendChild(rightArrow);
     
-    let fall = new TimelineMax({repeat})
-} 
+   TweenMax.to(rightArrow, 5, {
+       y: 500
+   });
+   
+    
+}
 
 spawnArrows()
 
