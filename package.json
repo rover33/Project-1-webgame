@@ -1,0 +1,22 @@
+{
+  "name": "project-1-webgame",
+  "version": "1.0.0",
+  "description": "normalize",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rover33/Project-1-webgame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rover33/Project-1-webgame/issues"
+  },
+  "homepage": "https://github.com/rover33/Project-1-webgame#readme",
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}

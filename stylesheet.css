@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#container{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.arrows{
+    height: 75px;
+    position: absolute;
+    top: -200px;
+    
+    
+}
+
