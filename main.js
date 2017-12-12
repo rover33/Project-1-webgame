@@ -11,9 +11,15 @@ startGame()
 
 function startGame(){
 
-   window.onkeydown = function(run){
-   run.keyCode == 37;
-       alert("key A!");
+   window.onkeydown = function(run){ //on pressing 'A' it will click the left arrow
+   if(run.keyCode == 65){ 
+    alert("key A!");
+   } else if(run.keyCode == 68) {
+    alert("key D!");
+   } else if(run.keyCode == 87){    
+    alert("key W!");
+   };
+       
    };
 
     function spawnRightArrow() {
