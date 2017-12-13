@@ -1,7 +1,7 @@
 
 var gameStarted = true; //this says start the game
 setTimeout(function() {
-    alert('game over') //when 1 minute has passed game will alert that its over.
+   console.log('game over') //when 1 minute has passed game will alert that its over.
     gameStarted = false;
 },60 * 1000)
 startGame()
@@ -17,7 +17,7 @@ var triangle = box3.getBoundingClientRect();
 
 
 //player Scores
-var player1ScoreDiv = document.getElementById('player1Score')
+var player1ScoreDiv = document.getElementById('startingScore')
 var player1Score = 0
 
 
@@ -152,3 +152,5 @@ function startGame(){
 
    
 }
+
+
