@@ -10,10 +10,10 @@ body{
     
 }
 
-/* #scores{
+#scores{
     display:flex;
     justify-content: center;
-} */
+}
 
 #scoreBox1{
     display: flex;
@@ -36,6 +36,7 @@ body{
 }
 
 #startingScore{
+    padding-top: .5rem;
     color: red;
     font-weight: bold;
 }
@@ -61,6 +62,7 @@ body{
 }
 
 #startingScore2{
+    padding-top: .5rem;
     color: red;
     font-weight: bold;
 }
@@ -117,6 +119,27 @@ body{
     width: 5rem;
     margin-top: 60vh;
     left: 25%;
+}
+
+.p2RightArrows{
+    height: 75px;
+    position: absolute;
+    top: -200px;
+    right: 5%;
+}
+
+.p2UpArrows{
+    height: 75px;
+    position: absolute;
+    top: -200px;
+    right: 15%
+}
+
+.p2LeftArrows{
+    height: 75px;
+    position: absolute;
+    top: -200px;
+    right: 5%;
 }
 
 #box4{
