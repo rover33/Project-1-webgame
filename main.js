@@ -16,6 +16,11 @@ var box3 = document.getElementById('box3');
 var triangle = box3.getBoundingClientRect();
 
 
+//player Scores
+var player1ScoreDiv = document.getElementById('player1Score')
+var player1Score = 0
+
+
 function startGame(){
     window.onkeydown = function(run){ 
         var leftArrows = document.getElementsByClassName('leftArrows')// creating a new variable that is contains the class leftArrows
@@ -28,8 +33,9 @@ function startGame(){
                         var arrowPositionLeft = leftArrows[i].getBoundingClientRect(); //giving the array position to a new variable
                         console.log(arrowPositionLeft)
                         console.log(rect.top)
-                        if(arrowPositionLeft.top < (rect.top + 30) && arrowPositionLeft.top > (rect.top - 30)){ //saying when the arrow is basically in the box
-                    alert('success')
+                        if(arrowPositionLeft.top < (rect.top + 20) && arrowPositionLeft.top > (rect.top - 20)){ //saying when the arrow is basically in the box
+                            player1Score += 10; //player score +10 each time you hit it correctly
+                            player1ScoreDiv.innerHTML = player1Score;
                     } 
                 }
             }
@@ -40,8 +46,9 @@ function startGame(){
                 var arrowPositionUp = upArrows[i].getBoundingClientRect();//giving the array position to a new variable
                 console.log(arrowPositionUp)
                 console.log(square.top)
-                if(arrowPositionUp.top < (square.top + 30) && arrowPositionUp.top > (square.top - 30)){ //saying when the arrow is basically in the box
-                    alert('up success')
+                if(arrowPositionUp.top < (square.top + 20) && arrowPositionUp.top > (square.top - 20)){ //saying when the arrow is basically in the box
+                    player1Score += 10; //player score +10 each time you hit it correctly
+                    player1ScoreDiv.innerHTML = player1Score;
                     }
                 } 
             }
@@ -53,8 +60,10 @@ function startGame(){
                 var arrowPositionRight = rightArrows[i].getBoundingClientRect();//giving the array position to a new variable
                 console.log(arrowPositionRight)
                 console.log(triangle.top)
-                if(arrowPositionRight.top < (triangle.top + 30) && arrowPositionRight.top > (triangle.top - 30)){ //saying when the arrow is basically in the box
-                    alert('right success')
+                if(arrowPositionRight.top < (triangle.top + 20) && arrowPositionRight.top > (triangle.top - 20)){ //saying when the arrow is basically in the box
+                    player1Score += 10; //player score +10 each time you hit it correctly
+                    player1ScoreDiv.innerHTML = player1Score;
+                    
                     }
                 } 
             }
