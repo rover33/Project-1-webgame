@@ -62,16 +62,12 @@ function startGame(){
 
     }    
 
-//    } else if(run.keyCode == 68) {
-   
-//    } else if(run.keyCode == 87){    
-
     function spawnRightArrow() {
-        let container = document.getElementById("container");
-        let rightArrow = document.createElement("img");
-        rightArrow.setAttribute("src", "images/arrowright.svg");
-        rightArrow.className = 'rightArrows';
-        container.appendChild(rightArrow);
+        let container = document.getElementById("container");//created a new element for container
+        let rightArrow = document.createElement("img"); //creating a new element imgage
+        rightArrow.setAttribute("src", "images/arrowright.svg");//setting the image to the arrow
+        rightArrow.className = 'rightArrows';//giving the arrow a class
+        container.appendChild(rightArrow);//appending that arrow to the container
         
     TweenMax.fromTo(rightArrow, 5, //TweenMax means it is animating my variable rightArrow at the total time it takes to do the animatiion
         {css:{top:'-200px'}},{css:{top:'1000px'}, onComplete:function() {rightArrow.remove()}, onUpdate:update}); //animating from -200px above the screen and then once it reaches the page it goes down 1000px. onComplete tell me when the animation is doen and then removes that arrow from the screen.
@@ -85,11 +81,11 @@ function startGame(){
     }
 
     function spawnUpArrow() {
-    let container = document.getElementById("container");
-    let upArrow = document.createElement("img");
-    upArrow.setAttribute("src", "images/arrowup.svg")
-    upArrow.className = 'upArrows';
-    container.appendChild(upArrow);
+    let container = document.getElementById("container");//creating a new element container
+    let upArrow = document.createElement("img");//creating a new element image
+    upArrow.setAttribute("src", "images/arrowup.svg")//setting the img to arrow
+    upArrow.className = 'upArrows';//giving arrow a class nam
+    container.appendChild(upArrow);//appending the arrow to the container
 
     TweenMax.fromTo(upArrow, 5, //TweenMax means it is animating my variable upArrow at the total time it takes to do the animatiion
         {css:{top:'-200px'}},{css:{top:'1000px'}, onComplete:function() {upArrow.remove()}, onUpdate:update}); //animating from -200px above the screen and then once it reaches the page it goes down 1000px. onComplete tell me when the animation is doen and then removes that arrow from the screen.
@@ -101,11 +97,11 @@ function startGame(){
     }
 
     function spawnLeftArrow() {
-        let container = document.getElementById("container");
-        let leftArrow = document.createElement("img");
-        leftArrow.setAttribute("src", "images/arrowleft.svg")
-        leftArrow.className = 'leftArrows';
-        container.appendChild(leftArrow);
+        let container = document.getElementById("container"); //creating a new element for the container
+        let leftArrow = document.createElement("img");//creating a new image element
+        leftArrow.setAttribute("src", "images/arrowleft.svg")//setting the img to the arrow
+        leftArrow.className = 'leftArrows';//giving the arrow a class name
+        container.appendChild(leftArrow);//appending the arrow to the container.
         
         TweenMax.fromTo(leftArrow, 5, //TweenMax means it is animating my variable leftArrow at the total time it takes to do the animatiion
             {css:{top:'-200px'}},{css:{top:'1000px'}, onComplete:function() {leftArrow.remove()}, onUpdate:update}); //animating from -200px above the screen and then once it reaches the page it goes down 1000px. onComplete tell me when the animation is doen and then removes that arrow from the screen.
