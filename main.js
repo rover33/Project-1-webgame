@@ -1,3 +1,4 @@
+
 var gameStarted = true; //this says start the game
 setTimeout(function() {
     alert('game over') //when 1 minute has passed game will alert that its over.
@@ -7,28 +8,37 @@ startGame()
 
 // var audio = new Audio('audio/minimale-animale.mp3') //audio for the game
 // audio.play();
-
+var box1 = document.getElementById('box1');
+var rect = box1.getBoundingClientRect();
 
 function startGame(){
+    window.onkeydown = function(run){ 
+        var leftArrows = document.getElementsByClassName('leftArrows')// creating a new variable that is contains the class leftArrows
+            if(run.keyCode == 65){ //on pressing 'A' it will click the left arrow
+                if (leftArrows){   //runs through the array of left arrows 
+                    for (var i = 0; i < leftArrows.length; i++) {
+                        console.log(leftArrows[i])
+                        var arrowPosition = leftArrows[i].getBoundingClientRect(); //gving the array position to a new variable
+                        console.log(arrowPosition)
+                        console.log(rect.top)
+                        if(arrowPosition.top < (rect.top + 20) && arrowPosition.top > (rect.top - 20)){ //saying when the arrow is basically in the box
+                    alert('success')
+                    }
+                }
+            }
+        }
+    }    
 
-   window.onkeydown = function(run){ //on pressing 'A' it will click the left arrow
-   if(run.keyCode == 65){ 
-    alert("key A!");
-   } else if(run.keyCode == 68) {
-    alert("key D!");
-   } else if(run.keyCode == 87){    
-    alert("key W!");
-   };
-
-
-   };
+//    } else if(run.keyCode == 68) {
+   
+//    } else if(run.keyCode == 87){    
 
     function spawnRightArrow() {
         let container = document.getElementById("container");
         let rightArrow = document.createElement("img");
         rightArrow.setAttribute("src", "images/arrowright.svg");
         rightArrow.className = 'rightArrows';
-        container.appendChild(rightArrow);
+        container.appendChild(rightArrows);
         
     TweenMax.fromTo(rightArrow, 5, //TweenMax means it is animating my variable rightArrow at the total time it takes to do the animatiion
         {css:{top:'-200px'}},{css:{top:'1000px'}, onComplete:function() {rightArrow.remove()}, onUpdate:update}); //animating from -200px above the screen and then once it reaches the page it goes down 1000px. onComplete tell me when the animation is doen and then removes that arrow from the screen.
