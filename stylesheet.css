@@ -4,21 +4,27 @@ body{
     overflow-x: hidden;
 }
 #container{
+    display:flex;
     height: 100vh;
     width: 100vw;
     
 }
 
+/* #scores{
+    display:flex;
+    justify-content: center;
+} */
+
 #scoreBox1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    height: 7rem;
-    width: 7rem;
     position: absolute;
-    background-color: black;
     left: 40%;
+    flex-wrap: wrap;
+    height: 6rem;
+    width: 6rem;
+    background-color: black;
 }
 
 #player1Score{
@@ -39,11 +45,11 @@ body{
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    height: 7rem;
-    width: 7rem;
     position: absolute;
+    right: 40%;
+    height: 6rem;
+    width: 6rem;
     background-color: black;
-    left: 55%;
 }
 
 #player2Score{
@@ -121,7 +127,7 @@ body{
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
-    left:90%;
+    right:5%;
 }
 
 #box5{
@@ -132,7 +138,7 @@ body{
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
-    left:80%
+    right:15%;
 }
 
 #box6{
@@ -143,5 +149,5 @@ body{
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
-    left: 70%;
+    right: 25%;
 }
