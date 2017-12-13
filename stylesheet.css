@@ -28,3 +28,35 @@ body{
     position: absolute;
     top: -200px;
 }
+
+#box1{
+    display:flex;
+    position: absolute;
+    border-color:black;
+    background:red;
+    height: 5rem;
+    width: 5rem;
+    margin-top: 60vh;
+}
+
+#box2{
+    display:flex;
+    position: absolute;
+    border-color:black;
+    background:red;
+    height: 5rem;
+    width: 5rem;
+    margin-top: 60vh;
+    left:10%
+}
+
+#box3{
+    display:flex;
+    position: absolute;
+    border-color:black;
+    background:red;
+    height: 5rem;
+    width: 5rem;
+    margin-top: 60vh;
+    left: 20%;
+}

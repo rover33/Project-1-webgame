@@ -19,7 +19,8 @@ function startGame(){
    } else if(run.keyCode == 87){    
     alert("key W!");
    };
-       
+
+
    };
 
     function spawnRightArrow() {
@@ -95,7 +96,7 @@ function startGame(){
 
     function getRandom() { //get a random number to cycle through the arrows to randomize the drop.
         var number = Math.floor(Math.random() * ((6-1)+1) + 1);
-        console.log(number)
+        // console.log(number)
         return number;
     }
 
