@@ -14,7 +14,7 @@ startGame()
 
 
 //timer
-var timeLeft = 60;
+var timeLeft = 59;
 var countDownTimer = setInterval(function(){
     document.getElementById('countDown').innerHTML = --timeLeft;
     if (timeLeft <= 0)
@@ -23,9 +23,16 @@ var countDownTimer = setInterval(function(){
     }
 }, 1000);
 
+//audio auto play
+var audio = document.getElementById('audio');
+    setTimeout(function(){
+        audio.pause()
+    }, 60 * 1000);
 
-// var audio = new Audio('audio/minimale-animale.mp3') //audio for the game
-// audio.play();
+
+
+
+//giving the box id's from html a variable on JS and then getting the position of the box on the page.
 var box1 = document.getElementById('box1');
 var rect = box1.getBoundingClientRect();
 
