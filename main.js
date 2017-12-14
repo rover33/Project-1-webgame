@@ -6,6 +6,18 @@ setTimeout(function() {
 },60 * 1000)
 startGame()
 
+//timer
+var timeLeft = 60;
+var countDownTimer = setInterval(function(){
+    document.getElementById('countDown').innerHTML = --timeLeft;
+    if (timeLeft <= 0)
+    {
+     document.getElementById('countDown').innerHTML = "Game Over";
+     clearInterval(interval);   
+    }
+}, 1000);
+
+
 // var audio = new Audio('audio/minimale-animale.mp3') //audio for the game
 // audio.play();
 var box1 = document.getElementById('box1');
@@ -55,7 +67,7 @@ function startGame(){
                     } 
                 }
             }
-        }else if(run.keyCode == 87){ //on pressing 'W' it will click the left arrow
+        } else if(run.keyCode == 87){ //on pressing 'W' it will click the left arrow
             if(upArrows){ //runs through the array of  arrows 
                 for (var i = 0; i < upArrows.length; i++) {
                     console.log(upArrows[i])
