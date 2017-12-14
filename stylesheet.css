@@ -11,6 +11,42 @@ body{ /* keeps the screen from resizing and scrolling with all the elements rain
     
 }
 
+#title{
+    display: flex;
+    align-content: center;
+    position: absolute;
+    font-size: 3rem;
+}
+
+#toggle{
+    display: flex;
+    align-content: center;
+    position: absolute;
+    margin-top: 30vh;
+}
+
+a{
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 2rem;
+    color: inherit;
+}
+
+#directions{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 50vh;
+    width: 70vw;
+}
+
+p{
+text-align: center;
+font-size: 1.5rem;
+/* padding-left: 2rem; */
+padding-right: 2rem;
+}
+
 #clock{
     display:flex;
     align-items: center;

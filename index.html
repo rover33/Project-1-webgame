@@ -1,42 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>EDM Finger Dancing</title>
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="stylesheet.css">
-
 </head>
 <body>
     <div id = "container">
-        <div id = "clock">
-            <div id = "countDown">60</div>
+        <div id = "title">
+            <h1>Finger Dancing</h1>    
         </div>
-        <div id ="scores">
-            <div id = "scoreBox1">
-                <div id = "player1Score">
-                    Player 1 Score
-                    <div id = "startingScore">0</div>
-                </div>
-            </div>
-            <div id = "scoreBox2">
-                <div id = "player2Score">
-                    Player 2 Score
-                    <div id = "startingScore2">0</div>
-                </div>
-            </div>
+        <div id = "toggle">
+            <a href = "gamepage.html">Play Game</a>    
+            <a href = "directions.html">How to play</a>
         </div>
-        <div id = "box1"></div>
-        <div id = "box2"></div>
-        <div id = "box3"></div>
-        <div id = "box4"></div>
-        <div id = "box5"></div>
-        <div id = "box6"></div>
-        <input type="button" value="Restart Game" onClick="document.location.reload(true)">
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>    
-    <script src="main.js"></script>
+    <script src="landingpage.js"></script>
 </body>
 </html>

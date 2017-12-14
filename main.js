@@ -1,7 +1,11 @@
 
 var gameStarted = true; //this says start the game
 setTimeout(function() {
-   console.log('game over') //when 1 minute has passed game will alert that its over.
+   if(player1Score > player2Score){ //when 1 minute has passed game will delcare winner based on the score.
+        alert('Winner Player 1')
+    } else if (player2Score > player1Score){
+        alert('Winner Player 2')
+    }
     gameStarted = false;
 },60 * 1000)
 startGame()
@@ -15,8 +19,7 @@ var countDownTimer = setInterval(function(){
     document.getElementById('countDown').innerHTML = --timeLeft;
     if (timeLeft <= 0)
     {
-     document.getElementById('countDown').innerHTML = "Game Over";
-     clearInterval(interval);   
+     document.getElementById('countDown').innerHTML = "Game Over"; 
     }
 }, 1000);
 
