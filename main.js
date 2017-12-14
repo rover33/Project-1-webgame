@@ -10,10 +10,21 @@ startGame()
 // audio.play();
 var box1 = document.getElementById('box1');
 var rect = box1.getBoundingClientRect();
+
 var box2 = document.getElementById('box2');
 var square = box2.getBoundingClientRect();
+
 var box3 = document.getElementById('box3');
 var triangle = box3.getBoundingClientRect();
+
+var box4 = document.getElementById('box4');
+var pentagon = box4.getBoundingClientRect();
+
+var box5 = document.getElementById('box5');
+var trap = box5.getBoundingClientRect();
+
+var box6 = document.getElementById('box6');
+var hex = box6.getBoundingClientRect();
 
 
 //player Scores
@@ -28,6 +39,9 @@ function startGame(){
         var leftArrows = document.getElementsByClassName('leftArrows')// creating a new variable that is contains the class leftArrows
         var upArrows = document.getElementsByClassName('upArrows') // creating new variable that contains class upArrows
         var rightArrows = document.getElementsByClassName('rightArrows')// creating variable that contains class rightArrows
+        var p2RightArrows = document.getElementsByClassName('p2RightArrows')// variable for player 2 right arrow
+        var p2UpArrows = document.getElementsByClassName('p2UpArrows') //player 2 up arrows
+        var p2LeftArrows = document.getElementsByClassName('p2LeftArrows')// player 2 left arrows
             if(run.keyCode == 65){ //on pressing 'A' it will click the left arrow
                 if (leftArrows){   //runs through the array of left arrows 
                     for (var i = 0; i < leftArrows.length; i++) {
@@ -43,35 +57,72 @@ function startGame(){
             }
         }else if(run.keyCode == 87){ //on pressing 'W' it will click the left arrow
             if(upArrows){ //runs through the array of  arrows 
-               for (var i = 0; i < upArrows.length; i++) {
-                console.log(upArrows[i])
-                var arrowPositionUp = upArrows[i].getBoundingClientRect();//giving the array position to a new variable
-                console.log(arrowPositionUp)
-                console.log(square.top)
-                if(arrowPositionUp.top < (square.top + 25) && arrowPositionUp.top > (square.top - 25)){ //saying when the arrow is basically in the box
-                    player1Score += 10; //player score +10 each time you hit it correctly
-                    player1ScoreDiv.innerHTML = player1Score;
+                for (var i = 0; i < upArrows.length; i++) {
+                    console.log(upArrows[i])
+                    var arrowPositionUp = upArrows[i].getBoundingClientRect();//giving the array position to a new variable
+                    console.log(arrowPositionUp)
+                    console.log(square.top)
+                    if(arrowPositionUp.top < (square.top + 25) && arrowPositionUp.top > (square.top - 25)){ //saying when the arrow is basically in the box
+                        player1Score += 10; //player score +10 each time you hit it correctly
+                        player1ScoreDiv.innerHTML = player1Score;
                     }
                 } 
             }
-
         } else if(run.keyCode == 68){ //on pressing 'D' it will click the left arrow
             if(rightArrows){ //runs through the array of right arrows 
-               for (var i = 0; i < rightArrows.length; i++) {
-                console.log(upArrows[i])
+                for (var i = 0; i < rightArrows.length; i++) {
+                console.log(rightArrows[i])
                 var arrowPositionRight = rightArrows[i].getBoundingClientRect();//giving the array position to a new variable
                 console.log(arrowPositionRight)
                 console.log(triangle.top)
                 if(arrowPositionRight.top < (triangle.top + 25) && arrowPositionRight.top > (triangle.top - 25)){ //saying when the arrow is basically in the box
                     player1Score += 10; //player score +10 each time you hit it correctly
                     player1ScoreDiv.innerHTML = player1Score;
-                    
                     }
                 } 
             }
-        }
+        } else if(run.keyCode == 39){ //on pressing 'D' it will click the left arrow
+            if(p2RightArrows){ //runs through the array of right arrows 
+                for (var i = 0; i < p2RightArrows.length; i++) {
+                console.log(p2RightArrows[i])
+                var p2Right = p2RightArrows[i].getBoundingClientRect();//giving the array position to a new variable
+                console.log(p2Right)
+                console.log(pentagon.top)
+                if(p2Right.top < (pentagon.top + 25) && p2Right.top > (pentagon.top - 25)){ //saying when the arrow is basically in the box
+                    player2Score += 10; //player score +10 each time you hit it correctly
+                    player2ScoreDiv.innerHTML = player2Score;
+                    }
+                }
+            }        
 
-    }    
+        } else if(run.keyCode == 38){ //on pressing 'D' it will click the left arrow
+            if(p2UpArrows){ //runs through the array of right arrows 
+                for (var i = 0; i < p2UpArrows.length; i++) {
+                console.log(p2UpArrows[i])
+                var p2Up = p2UpArrows[i].getBoundingClientRect();//giving the array position to a new variable
+                console.log(p2Up)
+                console.log(trap.top)
+                if(p2Up.top < (trap.top + 25) && p2Up.top > (trap.top - 25)){ //saying when the arrow is basically in the box
+                    player2Score += 10; //player score +10 each time you hit it correctly
+                    player2ScoreDiv.innerHTML = player2Score;
+                    }
+                }
+            }
+        }else if(run.keyCode == 37){ //on pressing 'D' it will click the left arrow
+            if(p2LeftArrows){ //runs through the array of right arrows 
+                for (var i = 0; i < p2LeftArrows.length; i++) {
+                console.log(p2LeftArrows[i])
+                var p2Left = p2LeftArrows[i].getBoundingClientRect();//giving the array position to a new variable
+                console.log(p2Up)
+                console.log(hex.top)
+                if(p2Left.top < (hex.top + 25) && p2Left.top > (hex.top - 25)){ //saying when the arrow is basically in the box
+                player2Score += 10; //player score +10 each time you hit it correctly
+                player2ScoreDiv.innerHTML = player2Score;
+                }
+            }
+        }
+    }
+}    
 
     function spawnRightArrow() {
         let container = document.getElementById("container");//created a new element for container

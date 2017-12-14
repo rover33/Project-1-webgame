@@ -1,6 +1,7 @@
 body{ /* keeps the screen from resizing and scrolling with all the elements raining down */
     margin: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 #container{ /* flex box container with width and Height */
     display:flex;
@@ -138,7 +139,7 @@ body{ /* keeps the screen from resizing and scrolling with all the elements rain
     height: 75px;
     position: absolute;
     top: -200px;
-    right: 5%;
+    right: 25%;
 }
 
 #box4{ /* click box area position and styling */
