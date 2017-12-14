@@ -19,6 +19,8 @@ var triangle = box3.getBoundingClientRect();
 //player Scores
 var player1ScoreDiv = document.getElementById('startingScore')
 var player1Score = 0
+var player2ScoreDiv = document.getElementById('startingScore2')
+var player2Score = 0
 
 
 function startGame(){
