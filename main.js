@@ -33,7 +33,7 @@ function startGame(){
                         var arrowPositionLeft = leftArrows[i].getBoundingClientRect(); //giving the array position to a new variable
                         console.log(arrowPositionLeft)
                         console.log(rect.top)
-                        if(arrowPositionLeft.top < (rect.top + 20) && arrowPositionLeft.top > (rect.top - 20)){ //saying when the arrow is basically in the box
+                        if(arrowPositionLeft.top < (rect.top + 25) && arrowPositionLeft.top > (rect.top - 25)){ //saying when the arrow is basically in the box
                             player1Score += 10; //player score +10 each time you hit it correctly
                             player1ScoreDiv.innerHTML = player1Score;
                     } 
@@ -46,7 +46,7 @@ function startGame(){
                 var arrowPositionUp = upArrows[i].getBoundingClientRect();//giving the array position to a new variable
                 console.log(arrowPositionUp)
                 console.log(square.top)
-                if(arrowPositionUp.top < (square.top + 20) && arrowPositionUp.top > (square.top - 20)){ //saying when the arrow is basically in the box
+                if(arrowPositionUp.top < (square.top + 25) && arrowPositionUp.top > (square.top - 25)){ //saying when the arrow is basically in the box
                     player1Score += 10; //player score +10 each time you hit it correctly
                     player1ScoreDiv.innerHTML = player1Score;
                     }
@@ -60,7 +60,7 @@ function startGame(){
                 var arrowPositionRight = rightArrows[i].getBoundingClientRect();//giving the array position to a new variable
                 console.log(arrowPositionRight)
                 console.log(triangle.top)
-                if(arrowPositionRight.top < (triangle.top + 20) && arrowPositionRight.top > (triangle.top - 20)){ //saying when the arrow is basically in the box
+                if(arrowPositionRight.top < (triangle.top + 25) && arrowPositionRight.top > (triangle.top - 25)){ //saying when the arrow is basically in the box
                     player1Score += 10; //player score +10 each time you hit it correctly
                     player1ScoreDiv.innerHTML = player1Score;
                     
@@ -190,7 +190,7 @@ function startGame(){
             default: //if 1-3 is selected then there will be a break between when the arrows are dropped. There is a 50% chance that no arrows will be dropped.
                 break
         }
-    }, 1000)
+    }, 800)
 
 
     function getRandom() { //get a random number to cycle through the arrows to randomize the drop.
