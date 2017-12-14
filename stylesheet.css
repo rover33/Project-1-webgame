@@ -186,3 +186,13 @@ body{ /* keeps the screen from resizing and scrolling with all the elements rain
     margin-top: 60vh;
     right: 25%;
 }
+
+input{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 5rem;
+    width: 8rem;
+    bottom: 2rem;
+}

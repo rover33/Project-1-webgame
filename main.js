@@ -6,6 +6,9 @@ setTimeout(function() {
 },60 * 1000)
 startGame()
 
+//startbutton
+
+
 //timer
 var timeLeft = 60;
 var countDownTimer = setInterval(function(){
