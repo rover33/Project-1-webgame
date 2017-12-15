@@ -4,6 +4,10 @@ body{ /* keeps the screen from resizing and scrolling with all the elements rain
     overflow-y: hidden;
 }
 
+#dir{
+    background-color: black;
+    background-size: cover;
+}
 
 #container{ /* flex box container with width and Height */
     display:flex;
@@ -18,7 +22,29 @@ body{ /* keeps the screen from resizing and scrolling with all the elements rain
     align-content: center;
     position: absolute;
     font-size: 3rem;
+    color: white;
 }
+
+
+#finger{  /* animation for the h1 on main index.html */
+animation: pulse 5s infinite;
+}
+
+@keyframes pulse{ /* animation for the h1 on main index.html */
+    0% {color: white;
+    }
+    50%{color: blue;
+    }
+    100%{color:white;}
+}
+
+/* #startButton{ NEEDS TO BE FIXED
+    color:white;
+    position: absolute;
+    font-size: 5rem;
+    margin-top: 15rem;
+    background: none;
+} */
 
 #toggle{ /* flex box for the positioning of the links to landing pages */
     display: flex;
@@ -29,10 +55,29 @@ body{ /* keeps the screen from resizing and scrolling with all the elements rain
 
 a{ /* styling for atags(links to each page) */
     text-decoration: none;
-    padding: 1rem;
     font-size: 2rem;
     color: inherit;
 }
+
+#play{ /* styling for individual button */
+    margin-right: 3rem;
+    background-color: white;
+}
+
+#howTwo{
+    background-color: white;
+    margin-left: 3rem;
+}
+
+#index{
+    margin-left: 3rem;
+    background-color: white;
+}
+#gamepg{
+    margin-right: 3rem;
+    background-color:white;
+}
+
 
 #directions{ /* flex box for the paragraphs */
     display: flex;
@@ -43,9 +88,10 @@ a{ /* styling for atags(links to each page) */
 }
 
 p{ /* styling for the paragraph tag */
-text-align: center;
-font-size: 1.5rem;
-padding-right: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-right: 2rem;
+    color: white;
 }
 
 #clock{ /* poisitoning and styling for clock */
@@ -62,7 +108,7 @@ padding-right: 2rem;
 
 #countDown{ /* poisitoning and styling for clock */
     text-align: center;
-    color: red;
+    color: white;
     font-size: 1.5rem;
 }
 
@@ -86,13 +132,13 @@ padding-right: 2rem;
     height: 3rem;
     top: 3rem;
     font-weight: bold;
-    color:red;
+    color:white;
     font-size: 1.5rem;
 }
 
 #startingScore{ /* score styling */
     padding-top: .5rem;
-    color: red;
+    color: #a045f5;
     font-weight: bold;
 }
 
@@ -109,13 +155,13 @@ padding-right: 2rem;
     height: 3rem;
     top: 3rem;
     font-weight: bold;
-    color:red;
+    color: white;
     font-size: 1.5rem;
 }
 
 #startingScore2{ /* flex box with positioning on the page */
     padding-top: .5rem;
-    color: red;
+    color: #a045f5;
     font-weight: bold;
 }
 
@@ -145,7 +191,7 @@ padding-right: 2rem;
     position: absolute;
     border-color:100px solid black;
     outline-style: solid;
-    outline-color: red;
+    outline-color: #a045f5;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -157,7 +203,7 @@ padding-right: 2rem;
     position: absolute;
     border-color:100px solid black;
     outline-style: solid;
-    outline-color: red;
+    outline-color: #a045f5;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -169,7 +215,7 @@ padding-right: 2rem;
     position: absolute;
     border-color:100px solid black;
     outline-style: solid;
-    outline-color: red;
+    outline-color: #a045f5;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -202,7 +248,7 @@ padding-right: 2rem;
     position: absolute;
     border-color:100px solid black;
     outline-style: solid;
-    outline-color: red;
+    outline-color: #a045f5;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -214,7 +260,7 @@ padding-right: 2rem;
     position: absolute;
     border-color:100px solid black;
     outline-style: solid;
-    outline-color: red;
+    outline-color: #a045f5;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -226,7 +272,7 @@ padding-right: 2rem;
     position: absolute;
     border-color:100px solid black;
     outline-style: solid;
-    outline-color: red;
+    outline-color: #a045f5;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;

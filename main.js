@@ -11,6 +11,11 @@ setTimeout(function() {
 startGame()
 
 
+//start game button IS IN PROGRESS
+// var startButton = document.getElementById('startButton')
+// startButton.addEventListener('click', function(startGame){
+// })
+
 //timer
 var timeLeft = 59;
 var countDownTimer = setInterval(function(){
