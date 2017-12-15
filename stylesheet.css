@@ -13,28 +13,28 @@ body{ /* keeps the screen from resizing and scrolling with all the elements rain
     
 }
 
-#title{
+#title{ /* flex box container for the headers on each landing page */
     display: flex;
     align-content: center;
     position: absolute;
     font-size: 3rem;
 }
 
-#toggle{
+#toggle{ /* flex box for the positioning of the links to landing pages */
     display: flex;
     align-content: center;
     position: absolute;
     margin-top: 30vh;
 }
 
-a{
+a{ /* styling for atags(links to each page) */
     text-decoration: none;
     padding: 1rem;
     font-size: 2rem;
     color: inherit;
 }
 
-#directions{
+#directions{ /* flex box for the paragraphs */
     display: flex;
     align-items: center;
     position: absolute;
@@ -42,14 +42,13 @@ a{
     width: 70vw;
 }
 
-p{
+p{ /* styling for the paragraph tag */
 text-align: center;
 font-size: 1.5rem;
-/* padding-left: 2rem; */
 padding-right: 2rem;
 }
 
-#clock{
+#clock{ /* poisitoning and styling for clock */
     display:flex;
     align-items: center;
     justify-content: center; 
@@ -61,7 +60,7 @@ padding-right: 2rem;
     margin-top: 10rem;
 }
 
-#countDown{
+#countDown{ /* poisitoning and styling for clock */
     text-align: center;
     color: red;
     font-size: 1.5rem;
@@ -234,7 +233,7 @@ padding-right: 2rem;
     right: 25%;
 }
 
-input{
+input{ /* styling and position for reset button */
     display:flex;
     justify-content: center;
     align-items: center;
@@ -247,7 +246,7 @@ input{
     font-weight: bold;
 }
 
-video{
+video{ /* poisitoning for the looping background with an z-index to make sure everything else is on top of it */
     object-fit: cover;
     position: absolute;
     z-index: -3;
