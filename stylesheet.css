@@ -3,6 +3,7 @@ body{ /* keeps the screen from resizing and scrolling with all the elements rain
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
 #container{ /* flex box container with width and Height */
     display:flex;
     justify-content: center;
@@ -55,13 +56,14 @@ padding-right: 2rem;
     height: 3rem;
     width: 6rem;
     font-weight: bold;
-    background-color: black;
+    background-color: inherit;
     margin-top: 10rem;
 }
 
 #countDown{
     text-align: center;
     color: red;
+    font-size: 1.5rem;
 }
 
 #scores{ /* overall flex for the scores to keep them centered of all the content */
@@ -76,7 +78,6 @@ padding-right: 2rem;
     align-items: center;
     height: 6rem;
     width: 6rem;
-    background-color: black;
 }
 
 #player1Score{ /* player 1 name score styling */
@@ -84,7 +85,8 @@ padding-right: 2rem;
     height: 3rem;
     top: 3rem;
     font-weight: bold;
-    color:white;
+    color:red;
+    font-size: 1.5rem;
 }
 
 #startingScore{ /* score styling */
@@ -98,7 +100,6 @@ padding-right: 2rem;
     align-items: center;
     height: 6rem;
     width: 6rem;
-    background-color: black;
 }
 
 #player2Score{ /* player 2 name score styling */
@@ -106,7 +107,8 @@ padding-right: 2rem;
     height: 3rem;
     top: 3rem;
     font-weight: bold;
-    color:white;
+    color:red;
+    font-size: 1.5rem;
 }
 
 #startingScore2{ /* flex box with positioning on the page */
@@ -139,8 +141,9 @@ padding-right: 2rem;
 #box1{ /* click box area position and styling */
     display:flex;
     position: absolute;
-    border-color:black;
-    background:red;
+    border-color:100px solid black;
+    outline-style: solid;
+    outline-color: red;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -150,8 +153,9 @@ padding-right: 2rem;
 #box2{ /* click box area position and styling */
     display:flex;
     position: absolute;
-    border-color:black;
-    background:red;
+    border-color:100px solid black;
+    outline-style: solid;
+    outline-color: red;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -161,8 +165,9 @@ padding-right: 2rem;
 #box3{ /* click box area position and styling */
     display:flex;
     position: absolute;
-    border-color:black;
-    background:red;
+    border-color:100px solid black;
+    outline-style: solid;
+    outline-color: red;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -193,8 +198,9 @@ padding-right: 2rem;
 #box4{ /* click box area position and styling */
     display:flex;
     position: absolute;
-    border-color:black;
-    background:red;
+    border-color:100px solid black;
+    outline-style: solid;
+    outline-color: red;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -204,8 +210,9 @@ padding-right: 2rem;
 #box5{ /* click box area position and styling */
     display:flex;
     position: absolute;
-    border-color:black;
-    background:red;
+    border-color:100px solid black;
+    outline-style: solid;
+    outline-color: red;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -215,8 +222,9 @@ padding-right: 2rem;
 #box6{ /* click box area position and styling */
     display:flex;
     position: absolute;
-    border-color:black;
-    background:red;
+    border-color:100px solid black;
+    outline-style: solid;
+    outline-color: red;
     height: 5rem;
     width: 5rem;
     margin-top: 60vh;
@@ -231,4 +239,10 @@ input{
     height: 5rem;
     width: 8rem;
     bottom: 2rem;
+}
+
+video{
+    object-fit: cover;
+    position: absolute;
+    z-index: -3;
 }
