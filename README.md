@@ -17,6 +17,9 @@ My biggiest obstacles was using the element.getBoundingRect() in my Javascript. 
 ### Unsolved Problems
 I had issues with having in a startButton. I am having trouble with this because I am not sure where to put it and what code to move around so everything still works. I also wanted to have a music playlist and have the music change everytime you restarted the game.
 
+### My own special twist
+I created my own music for the game. I used ableton to make the song.
+
 ### Technologies used
 For this project I used Greensock which is an animation platform. It makes the animation a lot more smooth. I had to learn a whole new set of terms to create the animations.
 
