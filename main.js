@@ -10,8 +10,6 @@ setTimeout(function() {
 },60 * 1000)
 startGame()
 
-//startbutton
-
 
 //timer
 var timeLeft = 59;

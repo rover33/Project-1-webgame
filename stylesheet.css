@@ -4,6 +4,7 @@ body{ /* keeps the screen from resizing and scrolling with all the elements rain
     overflow-y: hidden;
 }
 
+
 #container{ /* flex box container with width and Height */
     display:flex;
     justify-content: center;
@@ -251,3 +252,4 @@ video{
     position: absolute;
     z-index: -3;
 }
+
