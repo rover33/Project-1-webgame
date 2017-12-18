@@ -60,126 +60,111 @@ var player2Score = 0
 
 
 
-// creating a new variable that is contains the class of arrows
-// variable for players arrows
-//key presses for each arrow
-//runs through the array of arrows
-//giving the array position to a new variable
-//saying when the arrow is basically in the box
-//player score +10 each time you hit it correctly
-// remove arrow if clicked
 function startGame(){
     window.onkeydown = function(run){ 
-        var leftArrows = document.getElementsByClassName('leftArrows')
+        var leftArrows = document.getElementsByClassName('leftArrows') // creating a new variable that is contains the class of arrows
         var upArrows = document.getElementsByClassName('upArrows') 
         var rightArrows = document.getElementsByClassName('rightArrows')
         var p2RightArrows = document.getElementsByClassName('p2RightArrows')
         var p2UpArrows = document.getElementsByClassName('p2UpArrows') 
         var p2LeftArrows = document.getElementsByClassName('p2LeftArrows')
-        if(run.keyCode == 65){ 
+        if(run.keyCode == 65){ //key presses for each arrow
                 if (leftArrows){   
-                    for (var i = 0; i < leftArrows.length; i++) {
+                    for (var i = 0; i < leftArrows.length; i++) { //runs through the array of arrows
                         console.log(leftArrows[i])
-                        var arrowPositionLeft = leftArrows[i].getBoundingClientRect(); 
+                        var arrowPositionLeft = leftArrows[i].getBoundingClientRect(); //giving the array position to a new variable
                         console.log(arrowPositionLeft)
                         console.log(rect.top)
-                        if(arrowPositionLeft.top < (rect.top + 25) && arrowPositionLeft.top > (rect.top - 25)){
-                            player1Score += 10; 
+                        if(arrowPositionLeft.top < (rect.top + 25) && arrowPositionLeft.top > (rect.top - 25)){ //saying when the arrow is basically in the box
+                            player1Score += 10; //player score +10 each time you hit it correctly
                             player1ScoreDiv.innerHTML = player1Score;
-                            leftArrows[i].remove();
+                            leftArrows[i].remove(); // remove arrow if clicked
                         } 
                     }
                 }
-        } else if(run.keyCode == 87){ 
+        } else if(run.keyCode == 87){ //key presses for each arrow
             if(upArrows){ 
-                for (var i = 0; i < upArrows.length; i++) {
+                for (var i = 0; i < upArrows.length; i++) { //runs through the array of arrows
                     console.log(upArrows[i])
-                    var arrowPositionUp = upArrows[i].getBoundingClientRect();
+                    var arrowPositionUp = upArrows[i].getBoundingClientRect(); //giving the array position to a new variable
                     console.log(arrowPositionUp)
                     console.log(square.top)
-                    if(arrowPositionUp.top < (square.top + 25) && arrowPositionUp.top > (square.top - 25)){ 
-                        player1Score += 10; 
-                        player1ScoreDiv.innerHTML = player1Score;
-                        upArrows[i].remove();
+                    if(arrowPositionUp.top < (square.top + 25) && arrowPositionUp.top > (square.top - 25)){ //saying when the arrow is basically in the box
+                        player1Score += 10; //player score +10 each time you hit it correctly
+                        player1ScoreDiv.innerHTML = player1Score; 
+                        upArrows[i].remove(); // remove arrow if clicked
                     }
                 } 
             }
-        } else if(run.keyCode == 68){ 
+        } else if(run.keyCode == 68){ //key presses for each arrow
             if(rightArrows){ 
-                for (var i = 0; i < rightArrows.length; i++) {
+                for (var i = 0; i < rightArrows.length; i++) { //runs through the array of arrows
                 console.log(rightArrows[i])
-                var arrowPositionRight = rightArrows[i].getBoundingClientRect();
+                var arrowPositionRight = rightArrows[i].getBoundingClientRect(); //giving the array position to a new variable
                 console.log(arrowPositionRight)
                 console.log(triangle.top)
-                if(arrowPositionRight.top < (triangle.top + 25) && arrowPositionRight.top > (triangle.top - 25)){ 
-                    player1Score += 10; 
+                if(arrowPositionRight.top < (triangle.top + 25) && arrowPositionRight.top > (triangle.top - 25)){ //saying when the arrow is basically in the box
+                    player1Score += 10; //player score +10 each time you hit it correctly
                     player1ScoreDiv.innerHTML = player1Score;
-                    rightArrows[i].remove();
+                    rightArrows[i].remove(); // remove arrow if clicked
                     }
                 } 
             }
-        } else if(run.keyCode == 39){ 
+        } else if(run.keyCode == 39){ //key presses for each arrow
             if(p2RightArrows){ 
-                for (var i = 0; i < p2RightArrows.length; i++) {
+                for (var i = 0; i < p2RightArrows.length; i++) { //runs through the array of arrows
                 console.log(p2RightArrows[i])
-                var p2Right = p2RightArrows[i].getBoundingClientRect();
+                var p2Right = p2RightArrows[i].getBoundingClientRect(); //giving the array position to a new variable
                 console.log(p2Right)
                 console.log(pentagon.top)
-                if(p2Right.top < (pentagon.top + 25) && p2Right.top > (pentagon.top - 25)){ 
-                    player2Score += 10; 
+                if(p2Right.top < (pentagon.top + 25) && p2Right.top > (pentagon.top - 25)){ //saying when the arrow is basically in the box
+                    player2Score += 10; //player score +10 each time you hit it correctly
                     player2ScoreDiv.innerHTML = player2Score;
-                    p2RightArrows[i].remove();
+                    p2RightArrows[i].remove(); // remove arrow if clicked
                     }
                 }
             }        
 
-        } else if(run.keyCode == 38){ 
+        } else if(run.keyCode == 38){ //key presses for each arrow
             if(p2UpArrows){ 
-                for (var i = 0; i < p2UpArrows.length; i++) {
+                for (var i = 0; i < p2UpArrows.length; i++) { //runs through the array of arrows
                 console.log(p2UpArrows[i])
-                var p2Up = p2UpArrows[i].getBoundingClientRect();
+                var p2Up = p2UpArrows[i].getBoundingClientRect(); //giving the array position to a new variable
                 console.log(p2Up)
                 console.log(trap.top)
-                if(p2Up.top < (trap.top + 25) && p2Up.top > (trap.top - 25)){ 
-                    player2Score += 10; 
+                if(p2Up.top < (trap.top + 25) && p2Up.top > (trap.top - 25)){ //saying when the arrow is basically in the box
+                    player2Score += 10; //player score +10 each time you hit it correctly
                     player2ScoreDiv.innerHTML = player2Score;
-                    p2UpArrows.remove();
+                    p2UpArrows.remove(); // remove arrow if clicked
                     }
                 }
             }
-        }else if(run.keyCode == 37){ 
+        }else if(run.keyCode == 37){ //key presses for each arrow
             if(p2LeftArrows){ 
-                for (var i = 0; i < p2LeftArrows.length; i++) {
+                for (var i = 0; i < p2LeftArrows.length; i++) { //runs through the array of arrows
                 console.log(p2LeftArrows[i])
-                var p2Left = p2LeftArrows[i].getBoundingClientRect();
+                var p2Left = p2LeftArrows[i].getBoundingClientRect(); //giving the array position to a new variable
                 console.log(p2Up)
                 console.log(hex.top)
-                if(p2Left.top < (hex.top + 25) && p2Left.top > (hex.top - 25)){ 
-                player2Score += 10; 
+                if(p2Left.top < (hex.top + 25) && p2Left.top > (hex.top - 25)){ //saying when the arrow is basically in the box
+                player2Score += 10; //player score +10 each time you hit it correctly
                 player2ScoreDiv.innerHTML = player2Score;
-                p2LeftArrows[i].remove();
+                p2LeftArrows[i].remove(); // remove arrow if clicked
                 }
             }
         }
     }
 }    
-//created a new element for container
-//creating a new element imgage
-//setting the image to the arrow
-//giving the arrow a class
-//appending that arrow to the container
-//TweenMax means it is animating my variable rightArrow at the total time it takes to do the animatiion
-//animating from -200px above the screen and then once it reaches the page it goes down 1000px. onComplete tell me when the animation is doen and then removes that arrow from the screen.
 
-    function spawnRightArrow() {
-        let container = document.getElementById("container");
-        let rightArrow = document.createElement("img");
-        rightArrow.setAttribute("src", "images/arrowright.svg");
-        rightArrow.className = 'rightArrows';
-        container.appendChild(rightArrow);
+    function spawnRightArrow() { 
+        let container = document.getElementById("container"); //created a new element for container
+        let rightArrow = document.createElement("img"); //creating a new element imgage
+        rightArrow.setAttribute("src", "images/arrowright.svg"); //setting the image to the arrow
+        rightArrow.className = 'rightArrows'; //giving the arrow a class
+        container.appendChild(rightArrow);//appending that arrow to the container
    
-    TweenMax.fromTo(rightArrow, 5, 
-        {css:{top:'-200px'}},{css:{top:'1000px'}, onComplete:function() {rightArrow.remove()}, onUpdate:update}); 
+    TweenMax.fromTo(rightArrow, 5, //TweenMax means it is animating my variable rightArrow at the total time it takes to do the animatiion
+        {css:{top:'-200px'}},{css:{top:'1000px'}, onComplete:function() {rightArrow.remove()}, onUpdate:update}); //animating from -200px above the screen and then once it reaches the page it goes down 1000px. onComplete tell me when the animation is doen and then removes that arrow from the screen.
         function complete() {
         }
 
