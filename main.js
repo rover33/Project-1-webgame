@@ -75,19 +75,20 @@ function startGame(){
         var p2RightArrows = document.getElementsByClassName('p2RightArrows')
         var p2UpArrows = document.getElementsByClassName('p2UpArrows') 
         var p2LeftArrows = document.getElementsByClassName('p2LeftArrows')
-            if(run.keyCode == 65){ 
+        if(run.keyCode == 65){ 
                 if (leftArrows){   
                     for (var i = 0; i < leftArrows.length; i++) {
                         console.log(leftArrows[i])
                         var arrowPositionLeft = leftArrows[i].getBoundingClientRect(); 
                         console.log(arrowPositionLeft)
                         console.log(rect.top)
-                        if(arrowPositionLeft.top < (rect.top + 25) && arrowPositionLeft.top > (rect.top - 25) ){
+                        if(arrowPositionLeft.top < (rect.top + 25) && arrowPositionLeft.top > (rect.top - 25)){
                             player1Score += 10; 
                             player1ScoreDiv.innerHTML = player1Score;
-                    } 
+                            leftArrows[i].remove();
+                        } 
+                    }
                 }
-            }
         } else if(run.keyCode == 87){ 
             if(upArrows){ 
                 for (var i = 0; i < upArrows.length; i++) {
@@ -98,6 +99,7 @@ function startGame(){
                     if(arrowPositionUp.top < (square.top + 25) && arrowPositionUp.top > (square.top - 25)){ 
                         player1Score += 10; 
                         player1ScoreDiv.innerHTML = player1Score;
+                        upArrows[i].remove();
                     }
                 } 
             }
@@ -111,6 +113,7 @@ function startGame(){
                 if(arrowPositionRight.top < (triangle.top + 25) && arrowPositionRight.top > (triangle.top - 25)){ 
                     player1Score += 10; 
                     player1ScoreDiv.innerHTML = player1Score;
+                    rightArrows[i].remove();
                     }
                 } 
             }
@@ -124,6 +127,7 @@ function startGame(){
                 if(p2Right.top < (pentagon.top + 25) && p2Right.top > (pentagon.top - 25)){ 
                     player2Score += 10; 
                     player2ScoreDiv.innerHTML = player2Score;
+                    p2RightArrows[i].remove();
                     }
                 }
             }        
@@ -138,6 +142,7 @@ function startGame(){
                 if(p2Up.top < (trap.top + 25) && p2Up.top > (trap.top - 25)){ 
                     player2Score += 10; 
                     player2ScoreDiv.innerHTML = player2Score;
+                    p2UpArrows.remove();
                     }
                 }
             }
@@ -151,6 +156,7 @@ function startGame(){
                 if(p2Left.top < (hex.top + 25) && p2Left.top > (hex.top - 25)){ 
                 player2Score += 10; 
                 player2ScoreDiv.innerHTML = player2Score;
+                p2LeftArrows[i].remove();
                 }
             }
         }
@@ -210,7 +216,7 @@ function startGame(){
             function update() {
             }
         }
-        
+
         function player2RightArrow() {
             let container = document.getElementById("container");
             let p2RightArrow = document.createElement("img"); 
