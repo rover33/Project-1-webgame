@@ -82,7 +82,7 @@ function startGame(){
                         var arrowPositionLeft = leftArrows[i].getBoundingClientRect(); 
                         console.log(arrowPositionLeft)
                         console.log(rect.top)
-                        if(arrowPositionLeft.top < (rect.top + 25) && arrowPositionLeft.top > (rect.top - 25)){ 
+                        if(arrowPositionLeft.top < (rect.top + 25) && arrowPositionLeft.top > (rect.top - 25) ){
                             player1Score += 10; 
                             player1ScoreDiv.innerHTML = player1Score;
                     } 
@@ -170,10 +170,9 @@ function startGame(){
         rightArrow.setAttribute("src", "images/arrowright.svg");
         rightArrow.className = 'rightArrows';
         container.appendChild(rightArrow);
+   
     TweenMax.fromTo(rightArrow, 5, 
         {css:{top:'-200px'}},{css:{top:'1000px'}, onComplete:function() {rightArrow.remove()}, onUpdate:update}); 
-
-    
         function complete() {
         }
 
@@ -182,10 +181,11 @@ function startGame(){
     }
 
     function spawnUpArrow() {
-    let container = document.getElementById("container");
-    upArrow.setAttribute("src", "images/arrowup.svg")
-    upArrow.className = 'upArrows';
-    container.appendChild(upArrow);
+        let container = document.getElementById("container");
+        let upArrow = document.createElement("img");
+        upArrow.setAttribute("src", "images/arrowup.svg")
+        upArrow.className = 'upArrows';
+        container.appendChild(upArrow);
 
     TweenMax.fromTo(upArrow, 5, 
         {css:{top:'-200px'}},{css:{top:'1000px'}, onComplete:function() {upArrow.remove()}, onUpdate:update}); 
@@ -210,6 +210,7 @@ function startGame(){
             function update() {
             }
         }
+        
         function player2RightArrow() {
             let container = document.getElementById("container");
             let p2RightArrow = document.createElement("img"); 
@@ -228,9 +229,10 @@ function startGame(){
         }
     
         function player2UpArrow() {
-        let container = document.getElementById("container");
-        p2UpArrow.setAttribute("src", "images2/arrowup.svg");
-        p2UpArrow.className = 'p2UpArrows';
+            let container = document.getElementById("container");
+            let p2UpArrow = document.createElement("img"); 
+            p2UpArrow.setAttribute("src", "images2/arrowup.svg");
+            p2UpArrow.className = 'p2UpArrows';
         container.appendChild(p2UpArrow);
         
         TweenMax.fromTo(p2UpArrow, 5, 
