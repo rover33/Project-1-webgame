@@ -67,6 +67,7 @@ var player2Score = 0
 //giving the array position to a new variable
 //saying when the arrow is basically in the box
 //player score +10 each time you hit it correctly
+// remove arrow if clicked
 function startGame(){
     window.onkeydown = function(run){ 
         var leftArrows = document.getElementsByClassName('leftArrows')
