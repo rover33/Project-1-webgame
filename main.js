@@ -135,7 +135,7 @@ function startGame(){
                 if(p2Up.top < (trap.top + 25) && p2Up.top > (trap.top - 25)){ //saying when the arrow is basically in the box
                     player2Score += 10; //player score +10 each time you hit it correctly
                     player2ScoreDiv.innerHTML = player2Score;
-                    p2UpArrows.remove(); // remove arrow if clicked
+                    p2UpArrows[i].remove(); // remove arrow if clicked
                     }
                 }
             }
